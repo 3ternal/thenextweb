@@ -1,0 +1,161 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Maquette;
+  src: url(ARSMaqRegTr.otf);
+}
+@font-face {
+  font-family: Maquette;
+  src: url(ARSMaqBolTr.otf);
+  font-weight: bold;
+}
+
+h1, body, p {
+  font-family: Maquette;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background-color: white;
+  box-shadow: 0 2px 6px -1px gray;
+}
+
+header * {
+  margin-right: 10px;
+  color: #A2A2A2;
+}
+
+header > div {
+  margin-left: auto;
+}
+
+header > div > img {
+  border-left: 1px solid #F3F3F3;
+}
+
+.top {
+  width: 100%;
+  height: 75%;
+  position: relative;
+  top: 55px;
+  display: block;
+}
+
+.col1 div, .col2 div {
+  background-color: grey;
+  box-sizing: border-box;
+  border: 10px solid white;
+}
+
+.top .col2 {
+  width: 50%;
+  height: 100%;
+  float: right;
+  margin-right: 10px;
+}
+
+.top #article1 {
+  margin-right: auto;
+  width: 50%;
+  height: 100%;
+  border-right: 20px solid white;
+}
+
+.top #article2 {
+  width: 100%;
+  display: inline-block;
+  height: 50%;
+}
+
+.top #article3 {
+  width: 50%;
+  margin-right: auto;
+  height: 50%;
+}
+
+.top #article4 {
+  width: 50%;
+  float: right;
+  height: 50%;
+}
+
+.news {
+  margin: 60px auto;
+  width: 90%;
+}
+
+.news h1 {
+  font-size: 2em;
+  color: #FF4020;
+  padding: 15px 0 30px 40px;
+}
+
+.news p {
+  color: #FF4020;
+  text-align: right;
+}
+
+.news ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.news li {
+  display: inline-block;
+  vertical-align: top;
+  width: 16%;
+}
+
+.news li > img {
+  max-width: 100%;
+}
+
+.row2 {
+  margin-bottom: 40px;
+}
+
+.row2 div > div {
+  color: #A59C99;
+  font-size: 0.8em;
+  margin-top: 3px;
+}
+
+.categories-background {
+  background-color: #F6F6F6;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.categories-wrapper {
+  border-top: 1px solid #ECECEC;
+}
+
+.categories {
+  width: 80%;
+  margin: auto;
+}
+
+.heading  h1 {
+  display: inline-block;
+  font-size: 2em;
+  color: #FF4020;
+}
+
+.heading span:nth-of-type(2) {
+  float: right;
+  margin-top: 38px;
+  color: #FF4020;
+}
+
+.heading span:first-of-type {
+  color: #A9A9A9;
+  margin-left: 20px;
+}
