@@ -48,7 +48,7 @@ header > div > img {
   display: block;
 }
 
-.col1 div, .col2 div {
+.top .col1 div, .top .col2 div {
   background-color: grey;
   box-sizing: border-box;
   border: 10px solid white;
@@ -61,29 +61,44 @@ header > div > img {
   margin-right: 10px;
 }
 
+.top .col1 {
+  height: 100%;
+}
+
 .top #article1 {
   margin-right: auto;
-  width: 50%;
   height: 100%;
+  overflow: hidden;
   border-right: 20px solid white;
+  background-image: url(hero1.jpg);
+  background-repeat: no-repeat;
 }
 
 .top #article2 {
+  height: 50%;
   width: 100%;
   display: inline-block;
-  height: 50%;
+  overflow: hidden;
+  background-image: url(hero1.jpg);
+  background-repeat: no-repeat;
 }
 
 .top #article3 {
+  height: 50%;
   width: 50%;
   margin-right: auto;
-  height: 50%;
+  overflow: hidden;
+  background-image: url(hero2.jpg);
+  background-repeat: no-repeat;
 }
 
 .top #article4 {
+  height: 50%;
   width: 50%;
   float: right;
-  height: 50%;
+  overflow: hidden;
+  background-image: url(hero2.jpg);
+  background-repeat: no-repeat;
 }
 
 .news {
@@ -91,15 +106,34 @@ header > div > img {
   width: 90%;
 }
 
-.news h1 {
+.heading h1 {
   font-size: 2em;
   color: #FF4020;
   padding: 15px 0 30px 40px;
 }
 
-.news p {
+.news-heading {
+  display: block;
+  width: 100%;
+}
+
+.news-heading::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.news-heading h1 {
+  font-size: 2em;
   color: #FF4020;
-  text-align: right;
+  margin: 20px 0 0 40px;
+  float: left;
+}
+
+.news-heading p {
+  color: #FF4020;
+  float: right;
+  margin-top: 40px;
 }
 
 .news ul {
@@ -118,11 +152,11 @@ header > div > img {
   max-width: 100%;
 }
 
-.row2 {
+.news .row2 {
   margin-bottom: 40px;
 }
 
-.row2 div > div {
+.news .row2 div > div {
   color: #A59C99;
   font-size: 0.8em;
   margin-top: 3px;
@@ -132,30 +166,170 @@ header > div > img {
   background-color: #F6F6F6;
   width: 100%;
   padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 .categories-wrapper {
   border-top: 1px solid #ECECEC;
+  margin: 0 auto 40px auto;
 }
 
 .categories {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 
-.heading  h1 {
+.heading h1 {
   display: inline-block;
   font-size: 2em;
   color: #FF4020;
+  margin: 10px 0 0 0;
 }
 
 .heading span:nth-of-type(2) {
   float: right;
-  margin-top: 38px;
+  margin-top: 45px;
   color: #FF4020;
 }
 
 .heading span:first-of-type {
   color: #A9A9A9;
   margin-left: 20px;
+}
+
+.categories ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories li {
+  width: 16%;
+}
+
+.categories li > img {
+  max-width: 100%;
+}
+
+.categories .row1 li {
+  display: inline-block;
+}
+
+.categories .row1 ul {
+  margin-bottom: 0;
+}
+
+.categories .row2 ul {
+  margin-top: 0;
+}
+
+.shadow-wrapper {
+  background-color: white;
+  box-shadow: 1px 1px 8px -3px;
+}
+
+.shadow-wrapper > div:nth-of-type(1) {
+  font-weight: bold;
+  padding: 10px;
+}
+
+.shadow-wrapper > div:nth-of-type(2) {
+  color: #989898;
+  font-size: 0.8em;
+  padding: 0 10px 10px 10px;
+  border-bottom: 1px solid #F3F3F3;
+}
+
+.shadow-wrapper > div:nth-of-type(3) {
+  color: #BDBDBD;
+  font-size: 0.8em;
+  padding: 10px 0 10px 10px;
+}
+
+footer {
+  background-color: black;
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+footer .wrapper {
+  width: 60%;
+  margin: auto;
+}
+
+footer .col2 {
+  float: right;
+  width: 50%;
+  margin-top: 65px;
+}
+
+footer .col1 {
+  float: left;
+  width: 50%;
+  margin-top: 25px;
+}
+
+footer .col2 nav {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.8em;
+}
+
+footer .col2 nav span {
+  color: #888888;
+  margin-left: 10px;
+}
+
+footer .col2 img {
+  float: right;
+  margin-top: 30px;
+}
+
+footer::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.after-footer p {
+  font-family: Maquette;
+  color: #666666;
+  font-size: 0.8em;
+  width: 60%;
+  margin: auto;
+}
+
+.after-footer {
+  margin: 0;
+  width: 100%;
+  background-color: black;
+  padding-bottom: 25px;
+  border-bottom: 4px solid #FF4020;
+}
+
+#footer-border {
+  width: 100%;
+  border-top: 1px solid #3F3F3F;
+  padding-top: 25px;
+  background-color: black;
+  float: left;
+}
+
+footer .col1 span:first-of-type {
+  font-style: italic;
+  color: white;
+  line-height: 175%;
+}
+
+footer .col1 span:nth-of-type(2) {
+  color: #7B8888;
+  font-size: 0.8em;
+  margin-left: 5px;
+  margin-bottom: 25px;
+
+}
+
+footer .col1 img {
+  display: block;
+  margin: 10px 0;
 }
